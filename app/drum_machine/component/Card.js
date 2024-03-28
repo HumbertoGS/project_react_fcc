@@ -1,11 +1,10 @@
-import { useState } from "react";
-
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
 import SwitchBtn from "./button/SwitchBtn";
 import ClickBtn from "./button/ClickBtn";
+import useDrum from "../hook/useDrum";
 
 import { audioSound } from "../audioSound";
 import { enableSound } from "../utils/enableSound";
@@ -14,32 +13,16 @@ import { findItem } from "../utils/findItem";
 const { Piano, Heater } = audioSound;
 
 const Card = () => {
-  const [msg, setMsg] = useState("");
-  const [vol, setVol] = useState(30);
-  const [power, setPower] = useState(false);
-  const [bank, setBank] = useState(false);
-
-  const switchBank = (e) => {
-    const check = e.target.checked;
-    if (check) setMsg("Smooth Piano Kit");
-    else setMsg("Heater Kit");
-    setBank(check);
-  };
-
-  const switchPower = (e) => {
-    const check = e.target.checked;
-    setMsg("");
-    setPower(check);
-  };
-
-  const setVolumen = (e) => {
-    if (power) {
-      setVol(e.target.value);
-      setMsg("Volume: " + e.target.value);
-    } else setMsg("");
-  };
-
-  const updateMsg = (x) => setMsg(x);
+  const {
+    msg,
+    bank,
+    power,
+    vol,
+    updateMsg,
+    setVolumen,
+    switchBank,
+    switchPower,
+  } = useDrum();
 
   if (typeof document !== "undefined") {
     document.addEventListener(
