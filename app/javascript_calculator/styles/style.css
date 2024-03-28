@@ -1,0 +1,66 @@
+* {
+  font-family: Share Tech Mono, monospace;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+.w-66 {
+  width: 66%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-40 {
+  height: 40% !important;
+}
+
+.input {
+  color: #b86301;
+  font-size: 15px;
+}
+
+.output {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.input-display {
+  position: absolute;
+  z-index: -20;
+}
+
+.content {
+  height: 100vh;
+  background: #3bbb9b;
+}
+
+.calculator {
+  border: 2px solid;
+  padding: 4px;
+  background: #181717;
+}
+
+.display {
+  height: 55px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contentButton {
+  width: 220px;
+}
+
+.contentButtonOperation {
+  width: 67px;
+}
+
+.textAuthor {
+  color: #054aa3;
+}
