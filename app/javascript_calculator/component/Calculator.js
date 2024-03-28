@@ -1,53 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import useCalculator from "../hooks/useCalculator";
 
 import { Button } from "react-bootstrap";
-import useCalculator from "../hooks/useCalculator";
+
 const Calculator = () => {
   const { input, output, appendToInput, clearInput, calculate } =
     useCalculator();
-  //   const [input, setInput] = useState("0");
-  //   const [output, setOutput] = useState("0");
-
-  //   const appendToInput = (value) => {
-  //     const inputValue = document.getElementById("input");
-  //     inputValue.value += value;
-
-  //     if (value.match(/[+\-*\/]/g)) {
-  //       setOutput(value);
-  //     } else {
-  //       const lastChar = inputValue.value.split(/[+\-*\/]/g).pop();
-  //       setOutput(lastChar);
-  //     }
-
-  //     setInput(inputValue.value);
-  //   };
-
-  //   const clearInput = () => {
-  //     const inputValue = document.getElementById("input");
-  //     inputValue.value = "";
-
-  //     setInput("0");
-  //     setOutput("0");
-  //   };
-
-  //   const calculate = () => {
-  //     const inputValue = document.getElementById("input");
-  //     try {
-  //       let result = eval(inputValue.value);
-
-  //       if (result.toString().split(".")[1]) result = result.toFixed(2);
-
-  //       setInput(inputValue.value + "=" + result);
-  //       setOutput(result);
-
-  //       inputValue.value = result;
-  //     } catch (error) {
-  //       alert("Error en la expresión ingresada");
-  //       clearInput();
-  //     }
-  //   };
 
   return (
     <>
